@@ -19,9 +19,9 @@ const StarshipsList = () => {
         <h3>Starships</h3>
         <div className="icon-container">
           {starships.map(starshipsModel =>
-            <Link key={starshipsModel.model} to="/starships" state={{ starshipsModel }} >
+            <Link key={starshipsModel.name} to="/starships" state={{ starshipsModel }} >
               <div className="class-div" >
-                {starshipsModel.model}
+                {starshipsModel.name}
               </div>
             </Link>
           )}
