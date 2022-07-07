@@ -20,11 +20,13 @@ const StarshipPage = () => {
       <h1>Starship Page</h1>
       {starshipDetails.name ? 
         <> 
-          <div className='starship-page-div'>
+        <div className='starship-container'>
+          <div className='starship-div'>
             <h2>Name: {starshipDetails.name}</h2>
             <h2>Model: {starshipDetails.model}</h2>
             <h2>{<Link to="/starships-list">Return</Link>}</h2>
           </div>
+        </div>
         </> 
         : 
         <>

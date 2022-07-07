@@ -1,6 +1,7 @@
 body {
   padding: 10px;
-  background-color: blue;
+  background-color: #f4a261;
+  text-align: center;
 }
 
 a {
@@ -40,22 +41,12 @@ a {
   padding: 15px;
   margin: 1rem;
   color: white;
-  background-color: black;
-}
-
-.starship-page-div {
-  border: 1px solid black;
-  width: 125px;
-  display: grid;
-  justify-items: center;
-  padding: 15px;
-  margin: 1rem;
-  color: white;
-  background-color: black;
+  background-color: #181818;
+  border-radius: 5px;
 }
 
 .App-header {
-  background-color: grey;
+  background-color: #212121;
   min-height: 5vh;
   display: flex;
   flex-direction: row;
