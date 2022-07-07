@@ -1,5 +1,10 @@
 body {
   padding: 10px;
+  background-color: blue;
+}
+
+a {
+  color: white;
 }
 
 .App {
@@ -18,7 +23,7 @@ body {
   }
 }
 
-.icon-container {
+.starship-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -27,7 +32,18 @@ body {
   justify-content: center;
 }
 
-.class-div {
+.starship-div {
+  border: 1px solid black;
+  width: 125px;
+  display: grid;
+  justify-items: center;
+  padding: 15px;
+  margin: 1rem;
+  color: white;
+  background-color: black;
+}
+
+.starship-page-div {
   border: 1px solid black;
   width: 125px;
   display: grid;
@@ -44,10 +60,9 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 30px;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {

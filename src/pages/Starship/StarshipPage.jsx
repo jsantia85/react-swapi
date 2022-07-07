@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { getDetails } from '../../services/sw-api';
+import { Link } from 'react-router-dom';
 
 const StarshipPage = () => {
   const [starshipDetails, setStarshipDetails] = useState({})
@@ -13,23 +14,25 @@ const StarshipPage = () => {
     }
     fetchDetails()
   }, [location.state.starshipsModel.url])
+
   return (
     <>
-      <div>
-        {/* Look at this sweet ternary! */}
-        {/* This is a great way to render a 'loading' page! */}
-        {starshipDetails.name ?
-        <>
-          <h3>hello</h3>
-        </>
-        :
+      <h1>Starship Page</h1>
+      {starshipDetails.name ? 
+        <> 
+          <div className='starship-page-div'>
+            <h2>Name: {starshipDetails.name}</h2>
+            <h2>Model: {starshipDetails.model}</h2>
+            <h2>{<Link to="/starships-list">Return</Link>}</h2>
+          </div>
+        </> 
+        : 
         <>
           <p>Loading class details...</p>
         </>
-        }
-      </div>
+      }
     </>
-  )
+  );
 }
 
 export default StarshipPage;

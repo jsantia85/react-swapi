@@ -15,17 +15,15 @@ const StarshipsList = () => {
 
   return (
     <>
-      <div>
-        <h3>Starships</h3>
-        <div className="icon-container">
+      <h3>Starships</h3>
+      <div className="starship-container">
           {starships.map(starshipsModel =>
             <Link key={starshipsModel.name} to="/starships" state={{ starshipsModel }} >
-              <div className="class-div" >
+              <div className="starship-div" >
                 {starshipsModel.name}
               </div>
             </Link>
           )}
-        </div>
       </div>
     </>
   )
